@@ -11,18 +11,22 @@
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
         $(function() {
-            // hide, show
-            // fadeOut, fadeIn
-            // toggle
+            // click
+            // mouseover, mouseover, mousemove
+            $('#box').click(function () {
+                alert("hi");
 
-            //$('#box').hide(800);
-            //$('#box').fadeOut(800);
-            //$('#box').toggle(800);
-            $('#box').fadeOut(800, function() {
-                alert("gone!");
             });
-
-
+            $('#box')
+                .mouseover(function () {
+                    $(this).css('background', 'green');
+                })
+                .mouseout(function () {
+                    $(this).css('background', 'red');
+                })
+                .mousemove(function (e) {
+                    $(this).text(e.pageX);
+                });
         });
     </script>
 </body>
