@@ -3,29 +3,28 @@
 <head>
     <meta charset="utf-8">
     <title>jQueryの練習</title>
+    <style>
+      .myStyle {
+          border:5px solid green;
+          font-size:48px;
+      }
+    </style>
 </head>
 <body>
     <p>jQueryの練習</p>
-    <p><a href="http://google.com">Google</a></p>
-    <p><a href="http://yahoo.co.jp">Yahoo!</a></p>
-    <p><a href="http://dotinstall.com">Dotinstall</a></p>
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
         $(function() {
             // セレクタ.メソッド
-            // 属性セレクタ
-            // =
-            // !=
-            // *=
-            // ^=
-            // $=
+            // css 設定 取得
 
-            // $('a[href="http://google.com"]').css('background', 'red');
-            // $('a[href!="http://google.com"]').css('background', 'red');
-            // $('a[href*="dotinstall"]').css('background', 'red');
-             $('a[href$="jp').css('background', 'red');
+             $('p').css('color', 'red').css('background', 'blue');
+             console.log($('p').css('color'));
 
+             // addClass removeClass
+            $('p').addClass('myStyle');
+            //$('p').removeClass('myStyle');
         });
     </script>
 </body>
