@@ -6,33 +6,26 @@
 </head>
 <body>
     <p>jQueryの練習</p>
-    <ul id="main">
-        <li>0</li>
-        <li class="item">1</li>
-        <li class="item">2</li>
-        <li>
-            3
-            <ul id="sub">
-                <li>3-0</li>
-                <li>3-1</li>
-                <li class="item">3-2</li>
-                <li class="item">3-3</li>
-                <li>3-4</li>
-            </ul>
-        </li>
-    </ul>
+    <p><a href="http://google.com">Google</a></p>
+    <p><a href="http://yahoo.co.jp">Yahoo!</a></p>
+    <p><a href="http://dotinstall.com">Dotinstall</a></p>
+
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
         $(function() {
             // セレクタ.メソッド
-            // メソッドを使ったDOM要素の指定
-            // parent(), children()
-            // next(), prev()
-            // siblings() - 兄弟要素
+            // 属性セレクタ
+            // =
+            // !=
+            // *=
+            // ^=
+            // $=
 
-            //$("#sub").parent().css('color', 'red');
-            //$("#sub > li:eq(2)").next().css('color', 'red');
-            $("#sub > li:eq(2)").siblings().css('color', 'red');
+            // $('a[href="http://google.com"]').css('background', 'red');
+            // $('a[href!="http://google.com"]').css('background', 'red');
+            // $('a[href*="dotinstall"]').css('background', 'red');
+             $('a[href$="jp').css('background', 'red');
+
         });
     </script>
 </body>
