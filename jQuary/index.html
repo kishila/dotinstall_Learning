@@ -6,23 +6,22 @@
 </head>
 <body>
     <p>jQueryの練習</p>
-    <a href="http://google.com" data-sitename="google">google</a>
-    <input type="text" value="hello">
+    <ul>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+    </ul>
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
         $(function() {
-            // text
-            // html
-            // val
-            // remove, empty
+            // before, after -> inserBefore, inserAfter
+            // prepend, append -> prependTo, appendTo
 
-            //$('p').text('just changed')
-            //$('p').html('<a href="">click me!</a>');
-            //console.log($('input').val());
-            //$('input').val('hello, again!');
-            $('p').empty();
-
+            var li = $('<li>').text('just added');
+            //$('ul > li:eq(1)').before(li);
+            //li.insertBefore($('ul > li:eq(1)'));
+            $('ul').append(li);
         });
     </script>
 </body>
