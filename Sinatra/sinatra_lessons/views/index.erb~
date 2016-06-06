@@ -10,7 +10,6 @@
     <% @comments.each do |comment| %>
     <li data-id="<%= comment.id %>">
       <%= comment.body %>
-      <span class="deleteCmd" style="cursor:poiner;color:blue">
     </li>
     <% end %>
   </ul>
