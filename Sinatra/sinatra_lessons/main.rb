@@ -8,6 +8,7 @@ ActiveRecord::Base.establish_connection(
 )
 
 class Comments < ActiveRecord::Base
+  
 end
 
 get '/' do
