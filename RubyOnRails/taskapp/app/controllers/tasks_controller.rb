@@ -11,6 +11,12 @@ class TasksController < ApplicationController
     redirect_to project_path(params[:project_id])
   end
 
+  def toggle
+    @task = Task.find(params[:id])
+    @task.done = !@task.done
+    @task.save
+  end
+
   private
     def tasks_params
       params[:task].permit(:title)
