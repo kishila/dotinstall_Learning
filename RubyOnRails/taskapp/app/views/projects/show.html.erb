@@ -3,6 +3,8 @@
 <ul>
 <% @project.tasks.each do |task| %>
 <li>
+  <%= check_box_tag '', '', task.done, {'data-id' => task.id, 'data-project' =>
+      task.project_id} %>
   <%= task.title %>
   <%= link_to "[Delete]", project_task_path(task.project_id, task.id), method: :delete, data: {
 confirm: "are you sure?" } %>
@@ -14,5 +16,12 @@ confirm: "are you sure?" } %>
   <%= f.submit %>
   <% end %>
 </li>
-
 </ul>
+
+<script>
+$(function() {
+  $("input[type=checkbox]").click(function() {
+    $.post('/projects/xxx/tasks/xxx/toggle')
+  });
+});
+</script>
