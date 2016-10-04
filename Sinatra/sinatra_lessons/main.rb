@@ -8,7 +8,7 @@ ActiveRecord::Base.establish_connection(
 )
 
 class Comments < ActiveRecord::Base
-  
+
 end
 
 get '/' do
@@ -19,4 +19,8 @@ end
 post '/new' do
   Comments.create({:body => params[:body]})
   redirect '/'
+end
+
+post '/delete' do
+  Comments.find(params[:id]).destroy
 end

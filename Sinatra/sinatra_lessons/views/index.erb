@@ -26,9 +26,9 @@
       if (confirm('are you sure to delete?')){
         $.post('/delete', {
           id: el.data('id')
-        } function() {
+        }, function() {
           el.fadeOut(800);
-        })
+        });
       }
     })
   </script>
